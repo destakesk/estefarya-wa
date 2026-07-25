@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estefarya Clinic</title>
+<meta name="robots" content="noindex">
+<style>
+  body { margin:0; min-height:100vh; display:flex; align-items:center;
+    justify-content:center; font-family:-apple-system,Segoe UI,Roboto,sans-serif;
+    background:#0b141a; color:#e9edef; }
+  .card { text-align:center; }
+  a { color:#25d366; display:block; margin:8px; font-size:18px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>Estefarya Clinic</h1>
+  <p>WhatsApp</p>
+  <a href="./nl/">NL</a>
+  <a href="./tr/">TR</a>
+  <a href="./en/">EN</a>
+</div>
+<script>
+  var MAP = {"nl": "nl", "tr": "tr", "en": "en"};
+  var DEF = "en";
+  var lang = (navigator.language || "en").slice(0,2).toLowerCase();
+  var slug = MAP[lang] || DEF;
+  window.location.replace("./" + slug + "/");
+</script>
+</body>
+</html>
